@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">    
+    <link rel="stylesheet" href="./css/style.css">     
+    <title>Moonlighter - La mejor tienda de Rynoka</title>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Logo de Moonlighter">
+            </div>    
+            <div class="titulo">
+                <h1>Moonlighter</h1>
+            </div>
+        </div>   
+        <nav class="navegacion">
+            <ul>
+                <li><a href="./">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./reviews.html">Reseñas</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Resumen de la compra</h2>
+
+        <div class="compra">
+            <div id="detalle"></div>
+        </div>
+
+        <div class="contacto">
+        <form id="formulario" action="https://formspree.io/f/mnnvndlv" method="POST">
+            <textarea id="carritoData" name="carrito" style="display:none;"></textarea>
+            <textarea id="totalCarrito" name="total" style="display:none;"></textarea>
+            <label>Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            <label>Email:</label>
+            <input type="email" id="contactoEmail" name="email" placeholder="Correo electrónico" required>
+            <label>Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+            <button -type="submit" id="botonEnviar">Confirmar Compra</button>
+        </form>
+        </div>
+        
+
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>  
+        </div>
+        <div class="disclaimer">
+            <p>Este sitio es una entrega para el curso de <strong>Front - End JS</strong> parte <strong>Talento Tech</strong> (2025).
+            <br>
+            No se pretende infringir los derechos de autor.</p>
+        </div>
+    </footer>
+    
+    <!-- Detalles del carrito -->
+    <div id="modal-cart" class="cart">
+        <div class="cart-contenido">
+            <span class="cerrar-cart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="lista-cart"></div>
+            <div id="total-cart">Total: $0.00</div>
+            <div class="botones-cart">
+                <button id="vaciar-cart">Vaciar Carrito</button>
+                <button id="pagar-cart">Pagar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/carrito.js"></script>
+</body>
+</html>

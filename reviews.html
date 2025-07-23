@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">    
+    <link rel="stylesheet" href="./css/style.css">     
+    <title>Moonlighter - La mejor tienda de Rynoka</title>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Logo de Moonlighter">
+            </div>    
+            <div class="titulo">
+                <h1>Moonlighter</h1>
+            </div>
+        </div>   
+        <nav class="navegacion">
+            <ul>
+                <li><a href="./">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./reviews.html" class="actual">Reseñas</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="#" id="cart"><i class="fa-solid fa-cart-shopping"></i> <span id="cartcount"></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="reviews">
+            <div class="cliente">
+                <img src="./images/clientes/anciano.png" alt="Anciano del pueblo" >
+                <div class="opinion">
+                    <div class="estrellas"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i></div>
+                    <p>La tienda Moonlighter me recuerda a los viejos tiempos, cuando los comerciantes sabían equilibrar el comercio con el peligro. Will ha demostrado gran valor y astucia. Aunque los precios fluctúan un poco según la demanda, hay sabiduría en cómo lleva su negocio. </p>
+                </div>
+            </div>
+            <div class="cliente">
+                <img src="./images/clientes/investigadora.png" alt="Investigadora de mazmorras" >
+                <div class="opinion">
+                    <div class="estrellas"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+                    <p>Moonlighter es un tesoro para cualquier estudioso de las dimensiones alternativas. ¡Compré un artefacto golem que aún chisporrotea con energía dimensional! La tienda tiene objetos que no encontrarás en ningún otro sitio, y Will tiene un buen ojo para lo raro. Recomiendo preguntar por los ítems que ‘no están en vitrina’.</p>
+                </div>
+            </div>
+            <div class="cliente">
+                <img src="./images/clientes/aventurero.png" alt="Aventurero" >
+                <div class="opinion">
+                    <div class="estrellas"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i></div>
+                    <p>Buenos precios. Pócimas potentes. Una vez compré una espada maldita y solo me convirtió en piedra por dos horas. Volví por otra. A veces hay mucha gente y toca hacer fila, pero vale la pena.</p>
+                </div>
+            </div>
+            <div class="cliente">
+                <img src="./images/clientes/guardian.png" alt="Guadrian de la mazmorra" >
+                <div class="opinion">
+                    <div class="estrellas"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i></div>
+                    <p>¡Este humano entrometido no deja de invadir mi mazmorra! ¡Y luego VENDE mis reliquias como si fueran baratijas! No volveré a permitirle pasar, excepto... quizás... si baja los precios del cristal solar. Dos estrellas porque aprecio el negocio, aunque sea con botín robado.</p>
+                </div>
+            </div>
+            <div class="cliente">
+                <img src="./images/clientes/abuela.png" alt="Abuela del barrio" >
+                <div class="opinion">
+                    <div class="estrellas"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+                    <p>No entiendo mucho de esos artefactos flotantes o espadas que brillan, pero Will siempre me trata bien. Me vende lámparas que no se apagan y una vez me regaló una roca que hace flotar la sopa. ¡Maravilloso joven! Ojalá mi nieto fuera así de trabajador.</p>
+                </div>
+            </div>
+            <div class="cliente">
+                <img src="./images/clientes/hechicera.png" alt="Hechicera" >
+                <div class="opinion">
+                    <div class="estrellas"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+                    <p>Will es un comerciante raro... no teme arriesgar el cuello por ingredientes. Gracias a eso, su tienda está llena de materiales únicos que no consigo ni en la Forja Élfica. Compro casi todo allí para mis encantamientos. A veces le sugiero qué traerme... ¡y lo consigue! ¡Una maravilla!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>  
+        </div>
+        <div class="disclaimer">
+            <p>Este sitio es una entrega para el curso de <strong>Front - End JS</strong> parte <strong>Talento Tech</strong> (2025).
+            <br>
+            No se pretende infringir los derechos de autor.</p>
+        </div>
+    </footer>
+    
+    <!-- Detalles del carrito -->
+    <div id="modal-cart" class="cart">
+        <div class="cart-contenido">
+            <span class="cerrar-cart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="lista-cart"></div>
+            <div id="total-cart">Total: $0.00</div>
+            <div class="botones-cart">
+                <button id="vaciar-cart">Vaciar Carrito</button>
+                <button id="pagar-cart">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

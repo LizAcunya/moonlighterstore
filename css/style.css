@@ -1,0 +1,659 @@
+* {
+    box-sizing: border-box; 
+}
+
+html {
+    background: rgb(255, 255, 255) url(../images/fondo.png);
+    background-attachment: fixed;
+    background-position: top center;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    color: rgb(53, 53, 53);
+    background: none !important;
+}
+
+strong {
+    color: rgb(20, 157, 114);
+}
+
+/*** HEADER ***/
+
+header, footer {  
+    width: min(100%, 1280px);
+    margin: 0 auto;
+    background-color: rgb(69, 63, 49);
+    background-repeat: repeat-x;
+    background-position: bottom center;
+}
+
+header {  
+    position: sticky;
+    z-index: 1000;
+}
+
+.encabezado {    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.logo {
+    text-align: center;
+    filter: drop-shadow(3px 3px 0 rgb(236, 221, 192));
+    flex-grow: 1;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.titulo > h1 {
+    margin: 0;    
+    text-align: center;
+    font: 400 6em/1em "Jersey 25", sans-serif;
+    color: rgb(20, 157, 114);
+    text-shadow: 3px 3px 0 rgb(236, 221, 192);
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;  
+    width: min(100%, 1200px);
+}
+
+.navegacion ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.navegacion ul li {
+    flex-grow: 1;
+    text-align: center;
+    padding: 1em 0;
+    max-width: 50%;
+}
+
+.navegacion ul li a {
+    font: 600 1.2em/1em "Roboto Slab", serif;
+    color: rgb(20, 157, 114);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navegacion ul li a:hover {
+    color: rgb(236, 221, 192);
+}
+
+.navegacion ul li a::before {    
+    content: '';
+    padding: .6em;
+    margin-right: .5em;
+}
+
+.navegacion ul li a::after {    
+    content: '';
+    padding: .6em;
+    margin-left: .5em;
+}
+
+.navegacion ul li a:hover::before {    
+    background: url('../images/swirlgi.png') no-repeat center;
+    background-size: contain;
+}
+
+.navegacion ul li a:hover::after {    
+    background: url('../images/swirlgd.png') no-repeat center;
+    background-size: contain;
+}
+
+.actual {
+    color: rgb(236, 221, 192) !important;
+}
+
+/*** MAIN ***/
+
+main {
+    width: min(100%, 1280px);
+    margin: 0 auto;
+    background-color: rgb(236, 221, 192);
+    padding: .5em;
+}
+
+h2 {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    line-height: 1em;
+    text-align: center;
+    color: rgb(69, 69, 43);
+}
+
+h2::before {    
+    content: '';
+    padding: .6em;
+    margin-right: .2em;
+    background: url('../images/swirlgi.png') no-repeat center;
+    background-size: contain;
+}
+
+h2::after {    
+    content: '';
+    padding: .6em;
+    margin-left: .2em;
+    background: url('../images/swirlgd.png') no-repeat center;
+    background-size: contain;
+}
+
+/*** FOOTER ***/
+
+footer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+
+.socials {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.socials a {    
+    color: rgb(20, 157, 114);
+    margin: .1em;
+}
+
+.socials a:hover {
+    color: rgb(236, 221, 192);
+}
+
+.disclaimer {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: rgb(236, 221, 192);
+    text-align: center;
+    flex-grow: 2;
+}
+
+/*** INICIO ***/
+
+.bienvenida {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 1em; 
+}
+
+.bienvenida div {
+    font-size: 1.2em;
+    padding: .5em 1em;
+}
+
+.bienvenida img {    
+    width: 100%;
+}
+
+.tienda { 
+    padding: 0 !important;
+} 
+
+/*** PRODUCTOS ***/
+
+#productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.item {
+    width: 200px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgb(20, 157, 114);   
+    box-shadow: 5px 5px 0 rgb(69, 63, 49);
+}
+
+.item:hover {
+    animation: tilt-shaking 0.5s infinite;
+}
+
+.item h3 {
+    font: 400 1em/1em "Roboto Slab", serif;
+    color: rgb(236, 221, 192);    
+    text-shadow: 2px 2px 0 rgb(69, 63, 49);
+    text-align: center;
+    padding: 0 10px 10px;
+    border-bottom: 2px solid rgb(69, 63, 49);
+}
+
+.item img {    
+    width: 60%;
+    filter: drop-shadow(3px 3px 0 rgb(69, 63, 49));
+}
+
+.precio {
+    display: block;
+    font: 400 1em/1em "Roboto Slab", serif;
+    color: rgb(236, 221, 192);
+    padding: 1em 0 .5em;
+}
+
+.item button {
+    margin: .5em 0;
+    padding: .5em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(69, 63, 49); 
+    font: 400 1em "Jersey 25", sans-serif;     
+    color: rgb(236, 221, 192);  
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/*** RESEÑAS ***/
+
+.reviews {
+    display: grid;
+    gap: 20px;
+    place-items: stretch; 
+    padding: 20px; 
+}
+
+.cliente {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(230, 248, 243);   
+    box-shadow: 5px 5px 0 rgb(69, 63, 49);
+}
+
+.estrellas {
+    color: rgb(255, 187, 0);
+    padding: 10px;
+    border-bottom: 2px solid rgb(20, 157, 114);
+    text-align: center;
+}
+
+.estrellas::before {    
+    content: '';
+    padding: .6em;
+    margin-right: .5em;
+    background: url('../images/swirlgi.png') no-repeat center;
+    background-size: contain;
+}
+
+.estrellas::after {    
+    content: '';
+    padding: .6em;
+    margin-left: .5em;
+    background: url('../images/swirlgd.png') no-repeat center;
+    background-size: contain;
+}
+
+.cliente img {
+    width: 150px;
+    clip-path: circle(40%);
+}
+
+.cliente p {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.cliente p::first-letter {
+    font-size: 3em;
+    line-height: 1em;
+    color: rgb(20, 157, 114);
+    float: left;
+    padding-right: 2px;
+}
+
+/** CONTACTO **/
+
+.contacto, .compra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+form, #detalle {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: .5em;
+}
+
+form input, form textarea {
+    border: 2px solid rgb(69, 63, 49);
+    border-radius: 10px;
+    padding: .5em;
+}
+
+#submit, #reset, #botonEnviar {
+    padding: .5em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(69, 63, 49); 
+    font: 400 1em "Jersey 25", sans-serif;     
+    color: rgb(236, 221, 192);  
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*** MEDIA QUERIES ***/
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+    header {   
+        display: flex;
+        justify-content: center;
+        top: 0;        
+        padding: 1em 1em 35px;
+        background-image:url('../images/patternsmall.png');
+    }
+    .encabezado {
+        width: min(60px, 20vw);
+    }
+    .titulo > h1 {
+        display: none;
+    }
+    .navegacion {
+        flex-grow: 2;
+    }
+    .navegacion ul {        
+        flex-wrap: wrap;
+    }
+    .navegacion ul li {
+        padding: 1em ;
+        flex-grow: 1;
+    }    
+    
+    h2 {
+        font-size: 1.5em;
+    } 
+
+    footer {   
+        flex-direction: column;
+        padding: calc(35px + 2em) 1em 1em;
+        background-image:url('../images/patternsmall.png');
+    }
+    .socials {      
+        font-size: 3em;
+    }
+    .disclaimer { 
+        font-size: 1.2em;
+    } 
+
+    .bienvenida {
+        flex-wrap: wrap;
+    }
+    .bienvenida div {
+        font-size: 1.5em;
+    }
+    .tienda img:first-child{
+        display: none;    
+    }     
+
+    .item h3, .item button {
+        font-size: 1.5em;
+    } 
+
+    .grilla { 
+        grid-template-columns: 1fr; 
+    }
+}   
+
+/* Tablets (768px a 1279px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        top: -11em;        
+        padding: 1.5em 1em 40px;
+        background-image:url('../images/patternmed.png');
+    }
+    .logo {        
+        max-width: min(30%, 150px);
+    }
+    .titulo > h1 {
+        font-size: 6em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    footer {      
+        padding: calc(40px + 1em) 1em 1em;
+        background-image:url('../images/patternmed.png');
+        gap: 1em;
+    }
+    .socials {
+        width: 30%;        
+        font-size: 2em;
+    }
+    .disclaimer { 
+        font-size: .8em;
+    }
+
+    .tienda {
+        width: 100%;
+        padding: .5em !important;
+    }
+    .tienda img:last-child{
+        display: none;    
+    }
+    .reviews {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Escritorios (mayor 1280px) */
+@media (min-width: 1280px) {
+    body {
+        font-size: 18px;
+    }
+    header {
+        top: -12.5em;
+        padding: 1.5em 1em 60px;
+        background-image:url('../images/patternbig.png');
+    }
+    .logo {      
+        max-width: min(30%, 200px);
+    }
+    .titulo > h1 {
+        font-size: 6em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    footer {      
+        padding: calc(60px + 1em) 1em 1em;
+        background-image:url('../images/patternbig.png');
+        gap: 1em;
+    }
+    .socials {
+        width: 30%;        
+        font-size: 3em;
+    }
+    .disclaimer { 
+        font-size: 1em;
+    }
+
+    .tienda {
+        width: 100%;
+        padding: .5em !important;
+    }
+    .tienda img:last-child{
+        display: none;    
+    }
+    
+    .reviews { 
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/** CARRO DE COMPRAS **/
+
+/* Cantidad de productos */
+#cartcount {
+    display: none;
+    padding: 3px 4px;
+    border-radius: 9px;
+    letter-spacing: 0;
+    background: rgb(20, 157, 114);
+    color: rgb(236, 221, 192);
+}
+
+/* Detalles del pedido (Modal) */
+.cart {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;    
+    background:  rgba(0, 0, 0, 0.7);
+}
+
+.cart-contenido {
+    background-color: rgb(236, 221, 192);
+    margin: 10% auto;
+    padding: 20px 20px 50px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: cartopen 0.3s;
+
+    background-image:url('../images/patternsmall.png');
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    box-shadow: 5px 5px 0 rgb(69, 63, 49);
+}
+
+@keyframes cartopen {
+    from {opacity: 0; transform: translateY(-50px)}
+    to {opacity: 1; transform: translateY(0)}
+}
+
+.cerrar-cart {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 6px;
+    color: rgb(236, 221, 192);
+    background-color: rgb(20, 157, 114);
+}
+
+.cerrar-cart:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+#lista-cart {
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+
+.item-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(194, 165, 102);
+}
+
+.item-cart span:first-child {
+    flex: 2;
+}
+
+.item-cart span:last-child {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+}
+
+#total-cart {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px;
+    color: rgb(69, 63, 49); 
+    background-color: rgb(236, 209, 149); 
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.botones-cart {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.botones-cart button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: 400 1em "Jersey 25", sans-serif;  
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+#vaciar-cart {
+    background-color: #f44336;
+    color: white;
+}
+
+#vaciar-cart:hover {
+    background-color: #d32f2f;
+}
+
+#pagar-cart {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#pagar-cart:hover {
+    background-color: #388e3c;
+}
