@@ -532,8 +532,11 @@ form input, form textarea {
 /** CARRO DE COMPRAS **/
 
 /* Cantidad de productos */
-#cartcount {
+#cartlink {
     display: none;
+}
+
+#cartcount {
     padding: 3px 4px;
     border-radius: 9px;
     letter-spacing: 0;

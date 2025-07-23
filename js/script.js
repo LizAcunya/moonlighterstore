@@ -53,6 +53,7 @@ function manejarClicksModal(event) {
 function actualizarContadorCarrito() {
     const carrito = JSON.parse(sessionStorage.getItem("cart")) || [];
     const contador = document.getElementById("cartcount");
+    const cartlink = document.getElementById("cartlink")
 
     if (contador) {
         // Actualizar el número
@@ -60,9 +61,9 @@ function actualizarContadorCarrito() {
        
         // Mostrar u ocultar según si hay productos
         if (carrito.length > 0) {
-            contador.style.display = "inline-block";
+            cartlink.style.display = "list-item";
         } else {
-            contador.style.display = "none";
+            cartlink.style.display = "none";
         }
     }
 }
